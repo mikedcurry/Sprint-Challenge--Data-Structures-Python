@@ -45,6 +45,13 @@ class DoublyLinkedList:
         self.tail = node
         self.length = 1 if node is not None else 0
 
+    def make_list(self):
+        pointer = self.head
+        while pointer:
+            value = pointer.value
+            pointer = pointer.next
+            yield value
+
     def __len__(self):
         return self.length
 
